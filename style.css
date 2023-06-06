@@ -74,6 +74,7 @@ body {
     aspect-ratio: 1/1;
     border-radius: 50%;
     overflow: hidden;
+    cursor: pointer;
 }
 
 img {
@@ -109,6 +110,11 @@ img {
     color: var(--color-grey);
 }
 
+.text-unread {
+    color: var(--color-primary);
+    font-weight: 800;
+}
+
 /* NavBar */
 
 nav {
@@ -126,18 +132,20 @@ nav .container {
     justify-content: space-between;
 }
 
-nav .search-bar {
+/* Both for top and right search bar */
+
+.search-bar {
     background: var(--color-light);
     border-radius: var(--border-radius);
     padding: var(--search-padding);
 }
 
-nav .search-bar i {
+.search-bar i {
     font-size: 1.2rem;
     color: var(--color-primary);
 }
 
-nav .search-bar input[type="search"] {
+.search-bar input[type="search"] {
     background: transparent;
     font-family: inherit;
     letter-spacing: 1px;
@@ -148,12 +156,14 @@ nav .search-bar input[type="search"] {
     color: var(--color-primary);
 }
 
-nav .search-bar input::placeholder {
+.search-bar input::placeholder {
     font-family: inherit;
     color: var(--color-secondary);
     line-height: 1.2rem;
     letter-spacing: 2px;
 }
+
+/* =============== Till here ================== */
 
 nav .create {
     display: flex;
@@ -337,6 +347,7 @@ main .container .left .profile {
     width: 100%;
     position: relative;
     overflow: hidden;
+    cursor: pointer;
 }
 
 .middle .stories .story::before {
@@ -506,5 +517,94 @@ main .container .right {
     height: max-content;
     position: sticky;
     top: var(--sticky-top-right);
+    bottom: 0;
     /* max-width: 16rem; */
+}
+
+.right .messages {
+    background: var(--color-white);
+    border-radius: var(--card-border-radius);
+    padding: var(--card-padding);
+}
+
+.right .messages .heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+}
+
+.right .messages i {
+    font-size: 1.4rem;
+}
+
+.right .messages .search-bar {
+    display: flex;
+    margin-bottom: 1rem;
+    /* Other properties are taken from the search bar styling code for nav section */
+}
+
+.right .messages .category {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 1rem;
+}
+
+.right .messages .category h6 {
+    width: 100%;
+    font-size: 1rem;
+    text-align: center;
+    border-bottom: 4px solid var(--color-light);
+    padding-bottom: 0.5rem;
+}
+
+.right .messages .category .active {
+    border-color: var(--color-primary);
+    cursor: pointer;
+}
+
+.right .messages .category .message-requests {
+    color: var(--color-primary);
+    cursor: pointer;
+}
+
+.right .messages .message {
+    display: flex;
+    align-items: start;
+    gap: 1rem;
+    margin-bottom: 1rem;
+    cursor: pointer;
+}
+
+.right .messages .message:last-child {
+    margin-bottom: 0;
+}
+
+.right .messages .message p {
+    font-size: 0.8rem;
+    margin-top: 0.2rem;
+}
+
+.right .messages .message h5 {
+    font-size: 1rem;
+}
+
+.messages .message .profile-pic {
+    position: relative;
+    overflow: visible;
+}
+
+.messages .message .profile-pic img {
+    border-radius: 50%;
+}
+
+.messages .message .profile-pic .active {
+    background: var(--color-success);
+    width: 0.8rem;
+    height: 0.8rem;
+    border-radius: 50%;
+    border: 2px solid var(--color-white);
+    position: absolute;
+    bottom: 0;
+    right: 0;
 }
