@@ -170,7 +170,7 @@ main {
 
 main .container {
     display: grid;
-    grid-template-columns: 18vw auto 20vw;
+    grid-template-columns: 15vw auto 20vw;
     column-gap: 2rem;
     position: relative;
 }
@@ -179,7 +179,7 @@ main .container .left {
     height: max-content;
     position: sticky;
     top: var(--sticky-top-left);
-    max-width: 16rem;
+    /* max-width: 16rem; */
 }
 
 main .container .left .profile {
@@ -200,7 +200,7 @@ main .container .left .profile {
 
 .left .profile .handle h4 {
     color: var(--color-primary);
-    font-size: 1.4rem;
+    font-size: 1.2rem;
 }
 
 .left .sidebar .menu-item {
@@ -218,7 +218,7 @@ main .container .left .profile {
 
 .left .sidebar i {
     font-size: 1.6rem;
-    color: var(--color-grey);
+    color: var(--color-secondary);
     margin-left: 2rem;
     position: relative;
 }
@@ -237,8 +237,10 @@ main .container .left .profile {
 }
 
 .left .sidebar h3 {
-    margin-left: 1.5rem;
+    margin-left: 1rem;
     font-size: 1.2rem;
+    font-weight: 400;
+    color: var(--color-secondary);
 }
 
 .left .sidebar .active {
@@ -352,28 +354,28 @@ main .container .left .profile {
 }
 
 .middle .stories .story:nth-child(1) {
-    background: url(img/status-1.jpg) no-repeat center center/cover;
-    border: 2px solid var(--color-primary);
+    background: url(https://images.pexels.com/photos/11843595/pexels-photo-11843595.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load) no-repeat center center/cover;
+    /* border: 2px solid var(--color-primary); */
 }
 
 .middle .stories .story:nth-child(2) {
-    background: url(img/status-2.jpg) no-repeat center center/cover;
+    background: url(https://images.pexels.com/photos/17044899/pexels-photo-17044899/free-photo-of-glacier-snow-wood-landscape.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load) no-repeat center center/cover;
 }
 
 .middle .stories .story:nth-child(3) {
-    background: url(img/status-3.jpg) no-repeat center center/cover;
+    background: url(https://images.pexels.com/photos/17111340/pexels-photo-17111340/free-photo-of-city-water-street-building.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load) no-repeat center center/cover;
 }
 
 .middle .stories .story:nth-child(4) {
-    background: url(img/status-4.jpg) no-repeat center center/cover;
+    background: url(https://images.pexels.com/photos/17117466/pexels-photo-17117466.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load) no-repeat center center/cover;
 }
 
 .middle .stories .story:nth-child(5) {
-    background: url(img/status-5.jpg) no-repeat center center/cover;
+    background: url(https://images.pexels.com/photos/16611985/pexels-photo-16611985/free-photo-of-trees.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load) no-repeat center center/cover;
 }
 
 .middle .stories .story:nth-child(6) {
-    background: url(img/status-6.jpg) no-repeat center center/cover;
+    background: url(https://images.pexels.com/photos/16447305/pexels-photo-16447305/free-photo-of-city-art-street-building.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load) no-repeat center center/cover;
 }
 
 .middle .stories .story .profile-pic {
@@ -498,4 +500,11 @@ main .container .left .profile {
 
 .middle .feed .caption .hashtag {
     color: var(--color-primary);
+}
+
+main .container .right {
+    height: max-content;
+    position: sticky;
+    top: var(--sticky-top-right);
+    /* max-width: 16rem; */
 }
