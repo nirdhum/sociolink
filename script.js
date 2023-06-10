@@ -13,12 +13,7 @@ menuItems.forEach(item => {
 
         if (item.id != 'notifications') {
             document.querySelector('.notification-popup').style.display = 'none'
-        }
-        // } else if ($('body').click) {
-        //     // $(".popup").hide();
-        //     document.querySelector('.notification-popup').style.display = 'none'
-        // } 
-        else {
+        } else {
             document.querySelector('.notification-popup').style.display = 'block'
             document.querySelector('#notifications .notification-count').style.display = 'none'
         }
