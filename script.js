@@ -14,6 +14,11 @@ let rootEL = document.querySelector(':root')
 
 const colorPallet = document.querySelectorAll('.choose-color span')
 
+const bgColor = document.querySelectorAll('.choose-bg')
+const bgColor1 = document.querySelector('.bg-1')
+const bgColor2 = document.querySelector('.bg-2')
+const bgColor3 = document.querySelector('.bg-3')
+
 const removeCurrentActive = () => {
     menuItems.forEach(item => {
         item.classList.remove('active')
@@ -155,5 +160,58 @@ colorPallet.forEach(color => {
         rootEL.style.setProperty('--color-primary', primaryColor)
         rootEL.style.setProperty('--color-secondary', secondaryColor)
     })
+})
+
+const changeBgToLight = () => {
+    rootEL.style.setProperty('--color-white', colorWhite)
+    rootEL.style.setProperty('--color-dark', colorDark)
+    rootEL.style.setProperty('--color-light', colorLight)
+    rootEL.style.setProperty('--color-black', colorBlack)
+}
+
+const changeBgFromLight = () => {
+    rootEL.style.setProperty('--color-white', colorWhiteToDark)
+    rootEL.style.setProperty('--color-dark', colorDarkToLight)
+    rootEL.style.setProperty('--color-light', colorLightToDark)
+    rootEL.style.setProperty('--color-black', colorBlackToLight)
+}
+
+bgColor1.addEventListener('click', () => {
+
+    colorWhite = '#f5f5f5'
+    colorDark = '#17153f'
+    colorLight = '#e2e1f7'
+    colorBlack = '#1b1b1b'
+
+    bgColor1.classList.add('active');
+    bgColor2.classList.remove('active')
+    bgColor3.classList.remove('active')
+    changeBgToLight()
+})
+
+bgColor2.addEventListener('click', () => {
+
+    colorWhiteToDark = '#202020'
+    colorDarkToLight = '#e2e1f7'
+    colorLightToDark = '#1b1b1b'
+    colorBlackToLight = '#FFF0FF'
+
+    bgColor2.classList.add('active');
+    bgColor1.classList.remove('active')
+    bgColor3.classList.remove('active')
+    changeBgFromLight()
+})
+
+bgColor3.addEventListener('click', () => {
+
+    colorWhiteToDark = '#202020'
+    colorDarkToLight = '#adadad'
+    colorLightToDark = '#030303'
+    colorBlackToLight = '#adadad'
+
+    bgColor3.classList.add('active');
+    bgColor1.classList.remove('active')
+    bgColor2.classList.remove('active')
+    changeBgFromLight()
 })
 
