@@ -9,13 +9,14 @@
     --color-dark: #17153f;
     --color-light: #e2e1f7;
     --color-primary: #7b42e4;
-    --color-secondary: #9282cf;
+    --color-secondary: #cabeff;
     --color-success: #10c76c;
     --color-danger: #c71010;
-    --color-bg-1: #e4d442;
-    --color-bg-2: #e44242;
-    --color-bg-3: #42e44f;
-    --color-bg-4: #4288e4;
+    --color-bg-1: #7b42e4;
+    --color-bg-2: #d8c307;
+    --color-bg-3: #e44242;
+    --color-bg-4: #20bd2d;
+    --color-bg-5: #4288e4;
 
 
     --shadow-primary: rgba(74, 66, 228, 0.568);
@@ -144,14 +145,14 @@ nav .container {
 /* Both for top and right search bar */
 
 .search-bar {
-    background: var(--color-light);
+    background: var(--color-secondary);
     border-radius: var(--border-radius);
     padding: var(--search-padding);
 }
 
 .search-bar i {
     font-size: 1.2rem;
-    color: var(--color-primary);
+    color: var(--color-dark);
 }
 
 .search-bar input[type="search"] {
@@ -162,12 +163,12 @@ nav .container {
     margin-left: 0.5rem;
     font-size: 1rem;
     line-height: 1.5rem;
-    color: var(--color-primary);
+    color: var(--color-dark);
 }
 
 .search-bar input::placeholder {
     font-family: inherit;
-    color: var(--color-secondary);
+    color: var(--color-dark);
     line-height: 1.2rem;
     letter-spacing: 2px;
 }
@@ -237,7 +238,7 @@ main .container .left .profile {
 
 .left .sidebar i {
     font-size: 1.6rem;
-    color: var(--color-secondary);
+    color: var(--color-grey);
     margin-left: 2rem;
     position: relative;
 }
@@ -259,7 +260,7 @@ main .container .left .profile {
     margin-left: 1rem;
     font-size: 1.2rem;
     font-weight: 400;
-    color: var(--color-secondary);
+    color: var(--color-grey);
 }
 
 .left .sidebar .active {
@@ -328,6 +329,14 @@ main .container .left .profile {
     gap: 1rem;
     margin-top: 0.5rem;
     margin-bottom: 0.5rem;
+}
+
+.left .notification-popup .notification-body {
+    color: var(--color-dark);
+}
+
+.left .notification-popup .notification-body strong {
+    color: var(--color-primary);
 }
 
 .left .notification-popup small {
@@ -683,6 +692,7 @@ main .container .right {
     padding: 3rem;
     border-radius: var(--card-border-radius);
     width: 50%;
+    box-shadow: 0 0 0.5rem var(--color-primary);
 }
 
 .customize-theme .card .font-size {
@@ -745,26 +755,27 @@ main .container .right {
     width: 2rem;
     height: 2rem;
     border-radius: 50%;
+    cursor: pointer;
 }
 
 .customize-theme .card .color .choose-color span:nth-child(1) {
-    background: var(--color-primary);
-}
-
-.customize-theme .card .color .choose-color span:nth-child(2) {
     background: var(--color-bg-1);
 }
 
-.customize-theme .card .color .choose-color span:nth-child(3) {
+.customize-theme .card .color .choose-color span:nth-child(2) {
     background: var(--color-bg-2);
 }
 
-.customize-theme .card .color .choose-color span:nth-child(4) {
+.customize-theme .card .color .choose-color span:nth-child(3) {
     background: var(--color-bg-3);
 }
 
-.customize-theme .card .color .choose-color span:nth-child(5) {
+.customize-theme .card .color .choose-color span:nth-child(4) {
     background: var(--color-bg-4);
+}
+
+.customize-theme .card .color .choose-color span:nth-child(5) {
+    background: var(--color-bg-5);
 }
 
 .customize-theme .card .color .choose-color span.active {
@@ -853,6 +864,10 @@ main .container .right {
     .left .btn {
         display: none;
     }
+
+    .customize-theme .card {
+        width: 80vw;
+    }
 }
 
 @media screen and (max-width: 992px) {
@@ -896,5 +911,9 @@ main .container .right {
 
     main .container .right {
         display: none;
+    }
+
+    .customize-theme .card {
+        width: 90vw;
     }
 }
