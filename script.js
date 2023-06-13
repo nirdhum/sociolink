@@ -167,6 +167,7 @@ const changeBgToLight = () => {
     rootEL.style.setProperty('--color-dark', colorDark)
     rootEL.style.setProperty('--color-light', colorLight)
     rootEL.style.setProperty('--color-black', colorBlack)
+    rootEL.style.setProperty('--color-secondary', colorSecondary)
 }
 
 const changeBgFromLight = () => {
@@ -174,6 +175,7 @@ const changeBgFromLight = () => {
     rootEL.style.setProperty('--color-dark', colorDarkToLight)
     rootEL.style.setProperty('--color-light', colorLightToDark)
     rootEL.style.setProperty('--color-black', colorBlackToLight)
+    rootEL.style.setProperty('--color-secondary', colorSecondaryToDark)
 }
 
 bgColor1.addEventListener('click', () => {
@@ -182,6 +184,7 @@ bgColor1.addEventListener('click', () => {
     colorDark = '#17153f'
     colorLight = '#e2e1f7'
     colorBlack = '#1b1b1b'
+    colorSecondary = '#cabeff'
 
     bgColor1.classList.add('active');
     bgColor2.classList.remove('active')
@@ -195,6 +198,7 @@ bgColor2.addEventListener('click', () => {
     colorDarkToLight = '#e2e1f7'
     colorLightToDark = '#1b1b1b'
     colorBlackToLight = '#FFF0FF'
+    colorSecondaryToDark = '#17153f'
 
     bgColor2.classList.add('active');
     bgColor1.classList.remove('active')
@@ -208,6 +212,7 @@ bgColor3.addEventListener('click', () => {
     colorDarkToLight = '#adadad'
     colorLightToDark = '#030303'
     colorBlackToLight = '#adadad'
+    colorSecondaryToDark = '#17153f'
 
     bgColor3.classList.add('active');
     bgColor1.classList.remove('active')
