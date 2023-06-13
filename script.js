@@ -120,3 +120,40 @@ fontSizes.forEach(size => {
         document.querySelector('html').style.fontSize = font_size
     })
 })
+
+const removeColor = () => {
+    colorPallet.forEach(color => {
+        color.classList.remove('active')
+    })
+}
+
+colorPallet.forEach(color => {
+    color.addEventListener('click', () => {
+        removeColor()
+        let primaryColor
+        let secondaryColor
+        color.classList.toggle('active')
+
+
+        if (color.classList.contains('color-1')) {
+            primaryColor = '#7b42e4'
+            secondaryColor = '#cabeff'
+        } else if (color.classList.contains('color-2')) {
+            primaryColor = '#d8c307'
+            secondaryColor = '#feffbe'
+        } else if (color.classList.contains('color-3')) {
+            primaryColor = '#e44242'
+            secondaryColor = '#ffbebe'
+        } else if (color.classList.contains('color-4')) {
+            primaryColor = '#20bd2d'
+            secondaryColor = '#c9ffbe'
+        } else if (color.classList.contains('color-5')) {
+            primaryColor = '#4288e4'
+            secondaryColor = '#bee0ff'
+        }
+
+        rootEL.style.setProperty('--color-primary', primaryColor)
+        rootEL.style.setProperty('--color-secondary', secondaryColor)
+    })
+})
+
