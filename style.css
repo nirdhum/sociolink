@@ -109,7 +109,7 @@ img {
 
 .btn-primary {
     background: var(--color-primary);
-    color: aliceblue;
+    color: var(--color-light);
 }
 
 .text-bold {
@@ -812,6 +812,10 @@ main .container .right {
     border: 2px solid var(--color-primary);
 }
 
+.customize-theme .card .background .choose-bg>div.active span {
+    background: var(--color-primary);
+}
+
 .customize-theme .card .background .choose-bg .bg-1 {
     background: var(--color-white);
     color: var(--color-black);
@@ -819,12 +823,12 @@ main .container .right {
 
 .customize-theme .card .background .choose-bg .bg-2 {
     background: var(--color-black-dim);
-    color: var(--color-white);
+    color: aliceblue;
 }
 
 .customize-theme .card .background .choose-bg .bg-3 {
     background: var(--color-black-dark);
-    color: var(--color-white);
+    color: aliceblue;
 }
 
 .customize-theme .card .background .choose-bg>div span {
